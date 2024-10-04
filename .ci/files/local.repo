@@ -1,0 +1,59 @@
+[rhel-7-server-rpms]
+name=Red Hat Enterprise Linux 7
+baseurl=http://180.154.16.90/rhel-7-server-rpms/
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-extras-rpms]
+name=Red Hat Enterprise Linux 7 Extras
+baseurl=http://180.154.16.90/rhel-7-server-extras-rpms/
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-optional-rpms]
+name=Red Hat Enterprise Linux 7 Optional
+baseurl=http://180.154.16.90/rhel-7-server-optional-rpms/
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-rh-common-rpms]
+name=Red Hat Enterprise Linux 7 Common
+baseurl=http://180.154.16.90/rhel-7-server-rh-common-rpms/
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-satellite-tools-6.1-rpms]
+name=Red Hat Enterprise Linux 7 Satellite Tools 6.1
+baseurl=http://180.154.16.90/rhel-7-server-satellite-tools-6.1-rpms/
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-satellite-tools-6.2-rpms]
+name=Red Hat Enterprise Linux 7 Satellite Tools 6.2
+baseurl=http://180.154.16.90/rhel-7-server-satellite-tools-6.2-rpms/
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-supplementary-rpms]
+name=Red Hat Enterprise Linux 7 Supplementary
+baseurl=http://180.154.16.90/rhel-7-server-supplementary-rpms/
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-thirdparty-oracle-java-rpms]
+name=Red Hat Enterprise Linux 7 Oracle
+baseurl=http://180.154.16.90/rhel-7-server-thirdparty-oracle-java-rpms/
+enabled=1
+gpgcheck=0
+
+[rhel-server-rhscl-7-rpms]
+name=Red Hat Enterprise Linux 7 Software Collection
+baseurl=http://180.154.16.90/rhel-server-rhscl-7-rpms/
+enabled=1
+gpgcheck=0
+[epel]
+
+name=Extra Packages for Enterprise Linux 7
+baseurl=http://180.154.16.90/epel/
+enabled=1
+gpgcheck=0

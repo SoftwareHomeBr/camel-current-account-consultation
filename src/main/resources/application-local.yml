@@ -1,0 +1,91 @@
+camel:
+    component:
+        servlet:
+            mapping:
+                contextPath: /api/*
+        hystrix:
+            mapping:
+                enabled: false 
+        osg:
+            url: https://osg.paas.santanderbr.pre.corp/api/v1/
+            connection-request-timeout: 5000
+            connection-timeout: 5000
+            connect-timeout: -1
+            read-timeout: 10000
+            max-http-connections-pool: 20
+            http-connection-time-to-live: 300
+            http-connection-max-idle-time: 30
+            token: 42c72342be775e4125e11b4c8ea5ee36
+            type: rest
+        dlb:
+            embedded:
+                header-name: x-encryptedObject
+                enabled: true
+    hystrix:
+        execution-timeout-in-milliseconds: 10000
+        
+
+properties-osg:
+    channel:
+        code: 208
+    transaction:
+        code: 995
+
+integration:
+    remove:
+        headers:
+            - x-integration
+            - accept-encoding*
+            - x-encryptedobject
+            - x-integration
+            - transaction
+            - integrationheader
+            - x-integrationheader
+            - autenticacaohub
+
+http:
+    header:
+        integration: x-integration
+        channel-code: x-channelCode
+        transaction: transaction
+        integrationheader: integrationheader
+        x-encryptedobject: x-encryptedobject
+        autenticacaohub: autenticacaohub
+        osgheader: osgheader
+        
+server:
+    port: 8085
+    servlet:
+        context-path: /bff-cxa-current-account/v1
+
+api-config:
+  service-name: CXA-CURRENT-ACCOUNT
+
+env:
+    api:
+        database:
+              current-account:
+                prefix: http://localhost:8080/api-cxa-db-integration/v1/current-account
+                #prefix: https://cxa.paas.santanderbr.pre.corp/api-cxa-db-integration/v1/current-account
+        turbo:
+              current-account:
+                        balance:
+                            #prefix: https://esbapi.santanderbr.pre.corp/checkingAccount/v2/accountbalances
+                            prefix: https://tfc.paas.santanderbr.pre.corp/current-account/v1/api/balance
+                
+                
+
+logging:
+    group:
+        web: org.springframework.core.codec, org.springframework.http, org.springframework.web
+        spring: org.springframework.core.env
+        servlet: org.springframework.boot.web, org.apache.catalina, org.apache.coyote, org.apache.tomcat
+        data: org.springframework.jdbc.core, org.hibernate.sql, org.springframework.orm.jpa, com.zaxxer.hikari, org.hibernate, org.jooq.tools.LoggerListener
+        app: br.com.santander.cxa.currentaccount
+    level:
+        root: INFO
+        spring: INFO
+        app: INFO
+        servlet: WARN
+        web: WARN
+        data: INFO

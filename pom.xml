@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>br.com.santander.bhs</groupId>
+		<artifactId>integration-parent</artifactId>
+      	<version>3.0.5</version>
+	</parent>
+
+	<groupId>br.com.santander.cxacaml.clientintegration</groupId>
+	<artifactId>cxa-camel-current-account-consultation</artifactId>
+	<version>1.0.0</version>
+	<name>cxa-camel-current-account-consultation</name>
+	<description>Current Account Camel API</description>
+	
+	<properties>
+        <sonar.coverage.exclusions>
+            **/route/*,
+            **/config/*,
+            **/model/*
+        </sonar.coverage.exclusions>
+	</properties>
+
+	<dependencies>
+
+		<!-- Base -->
+		<dependency>
+			<groupId>br.com.santander.bhs</groupId>
+			<artifactId>integration-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>br.com.santander.bhs</groupId>
+			<artifactId>integration-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>br.com.santander.bhs.camel</groupId>
+			<artifactId>integration-lib-embeddedcrypto</artifactId>
+            <version>3.0.0</version>
+		</dependency>
+
+		<!-- Camel -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-http</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-gson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jacksonxml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jsonpath</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-jolt</artifactId>
+		</dependency>
+
+		<!-- Integration -->
+		<dependency>
+			<groupId>br.com.santander.bhs.camel.component</groupId>
+			<artifactId>integration-lib-osg</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+		  <groupId>br.com.santander.cxa.camel.component</groupId>
+		  <artifactId>integration-lib-cxa-bigdata</artifactId>
+		  <version>1.2.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.com.santander.bhs.trace</groupId>
+			<artifactId>integration-lib-tracing</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>br.com.santander.bhs.core</groupId>
+			<artifactId>integration-lib-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>javax.xml.bind</groupId>
+		    <artifactId>jaxb-api</artifactId>
+		    <version>2.3.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.sun.xml.bind</groupId>
+		    <artifactId>jaxb-core</artifactId>
+		    <version>2.3.0.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.sun.xml.bind</groupId>
+		    <artifactId>jaxb-impl</artifactId>
+		    <version>2.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-model</artifactId>
+			<version>3.3.9</version>
+		</dependency>
+		<!-- Utils -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.beanrunner</groupId>
+			<artifactId>beanrunner</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.bean-matchers</groupId>
+			<artifactId>bean-matchers</artifactId>
+			<version>0.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.camel.springboot</groupId>
+		    <artifactId>camel-resilience4j-starter</artifactId>
+		</dependency>		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

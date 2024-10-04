@@ -1,0 +1,13 @@
+{ 
+    "allow_root": true, 
+    "timeout": 120000,
+    "registry": {
+        "search": [
+            "http://artifactory.produbanbr.corp/artifactory/api/bower/bower-public/"
+        ]
+    },
+    "resolvers" : [ "bower-art-resolver" ],
+    "color": true,
+    "directory": "bower_components",
+    "save": true
+}

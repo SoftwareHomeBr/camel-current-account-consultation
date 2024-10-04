@@ -1,0 +1,63 @@
+pipelineType: default
+pipelineVersion: 1.3
+buildTools: null
+technology:
+  name: JAVA
+  version: '11'
+applicationType: API
+buildArgs: null
+chaosMonkeyTestEnable: true
+chaosMonkeyTestDuration: 90
+chaosMonkeyTestLevel: BAIXO
+sonarExclusions: '**/*.js'
+sonarCoverageFilePath: target/jacoco.exec
+environment:
+  dev:
+    smokeTest:
+      type: null
+    functionalTest:
+      type: null
+    loadRunner:
+      repository: null
+    appScan:
+      repository: null
+  pi:
+    smokeTest:
+      type: null
+    functionalTest:
+      type: null
+    loadRunner:
+      repository: null
+    appScan:
+      repository: null
+  pre:
+    smokeTest:
+      type: SCRIPT_SHELL
+      repository: N/A
+      branch: N/A
+      args: '"status":"UP"'
+    functionalTest:
+      type: N/A
+      repository: N/A
+      branch: N/A
+      args: N/A
+    loadRunner:
+      repository: null
+    appScan:
+      repository: null
+  blue:
+    smokeTest:
+      type: SCRIPT_SHELL
+      repository: N/A
+      branch: N/A
+      args: '"status":"UP"'
+    functionalTest:
+      type: N/A
+      repository: N/A
+      branch: N/A
+      args: N/A
+    loadRunner:
+      repository: null
+    appScan:
+      repository: null
+matriculaPO: T714359

@@ -1,0 +1,12 @@
+<ivysettings>
+  <settings defaultResolver="artifactory"/>
+    <credentials host="santander" realm="Artifacotry Repository Manager" username="admin" passwd="admin123"/>
+    <property name="artifactory-public" value="http://artifactory.produbanbr.corp/artifactory/maven-public"/>
+    <property name="artifactory-releases" value="http://artifactory.produbanbr.corp/artifactory/maven-releases"/>
+    <property name="artifactory-snapshots" value="http://artifactory.produbanbr.corp/artifactory/maven-snapshots"/>
+    <resolvers>
+      <ibiblio name="artifactory" m2compatible="true" root="${artifactory-public}"/>
+      <ibiblio name="artifactory-snapshots" m2compatible="true" root="${artifactory-snapshots}"/>
+      <ibiblio name="artifactory-releases" m2compatible="true" root="${artifactory-releases}"/>
+    </resolvers>
+</ivysettings>
